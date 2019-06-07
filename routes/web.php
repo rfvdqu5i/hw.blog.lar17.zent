@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index');
+
+Route::get('/category/{slug}','HomeController@category');
+ 
+Route::get('/post/{slug}', 'HomeController@detailPost');
+
+Route::get('/tag/{slug}', 'HomeController@listPostByTag');
+#tạo route > truyền đường dẫn > tạo controller
